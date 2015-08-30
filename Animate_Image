@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Page Title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<style type="text/css">
+	.square{
+		background-color: red;
+		width: 200px;
+		height: 200px;
+		position: relative;
+		z-index: 1;
+		margin: 10px;
+	}
+	.circle{
+		background-color: green;
+		width: 100px;
+		height: 100px;
+		border-style: solid;
+		border-color: green;
+		border-radius: 100px;
+		position: relative;
+		z-index: 1;
+		margin: 10px;
+		}
+</style>
+<body>
+	
+	<img src="http://colouringbook.org/RSS/June-2011/COLOURINGBOOK.ORG/cartoon_fly-1979px.png" width="100px" height="100px"/>
+	<script>		
+		$("img").mouseover(function() {    	
+			$(this).animate({width:"300px", height:"300px"},500);
+		});
+		$("img").mouseout(function() {    	
+			$(this).removeAttr('style');
+		});
+		
+	</script>
+
+</body>
+</html>
